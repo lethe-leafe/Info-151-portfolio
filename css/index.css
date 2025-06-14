@@ -13,7 +13,7 @@ body {
 }
 nav {
 	position: relative;
-	overflow: hidden;
+	overflow: visible;
 	padding: 1rem;
 	z-index: 1000;
 	width: 100%;
@@ -105,16 +105,13 @@ hr {
 		flex-direction: column;
 		background-color: #f4fbef;
 		position: absolute;
-		top: 3.5rem;
+		top: 100%; /* Position right below the nav */
 		left: 0;
 		right: 0;
-		z-index: 10;
+		z-index: 1001;
 		padding: 0.5rem 0;
 		box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-	}
-	/* When nav is open, show the menu */
-	nav.open .nav-links {
-		display: flex;
+		width: 100%;
 	}
 	.nav-links a {
 		display: block;
@@ -124,13 +121,20 @@ hr {
 		color: #556753;
 		font-size: 16px;
 		background-color: #f4fbef;
+		float: none !important;
+		width: 100%;
+	}
+	/* When nav is open, show the menu */
+	nav.open .nav-links {
+		display: flex !important;
 	}
 	.hamburger {
 		display: block;
 		position: absolute;
 		right: 1rem;
-		top: 1.25rem;
-		z-index: 20;
+		top: 50%;
+		transform: translateY(-50%); /* Center vertically */
+		z-index: 1002;
 		font-size: 28px;
 		background: none;
 		border: none;
@@ -141,8 +145,11 @@ hr {
 		float: none;
 		text-align: center;
 	}
+	nav .nav-links {
+		float: none;
+	}
 	.pic1, .pic2 {
-		display: none; 	
+		display: none; 
 	}
 }
 .section {
