@@ -1,61 +1,66 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 body {
-	background: #F4FBEF;
-	flex: none;
-	order: 1;
-	align-self: stretch;
-	flex-grow: 0;
-	z-index: 1;
+  background: #F4FBEF;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
 nav {
-	overflow: hidden;
-	padding: 1rem;
+  position: relative;
+  overflow: visible;
+  padding: 1rem;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 nav a {
-	color: #556753;
-	float: right;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
-	font-family: 'Bagel Fat One';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 24px;
-	padding: 5px 1.5rem;
+  color: #556753;
+  float: right;
+  text-align: center;
+  padding: 5px 1.5rem;
+  text-decoration: none;
+  font-family: 'Bagel Fat One';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 nav .left {
-	float: left;
+  float: left;
 }
 
-nav .left img{
-	height: 32px;
-	width: 38px;
-	object-fit: contain;
+nav .left img {
+  height: 32px;
+  width: 38px;
+  object-fit: contain;
 }
 
 nav .name {
-	font-size: 1.25rem;
-	font-weight: bold;
-
-	width: 689px;
-	height: 36px;
-
-	font-family: 'Bagel Fat One';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 28px;
-	line-height: 36px;
-
-	color: #657A62;
+  font-family: 'Bagel Fat One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #657A62;
 }
 
 hr {
-	width: 100%;
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-top: 1px solid #ccc;
 }
+
 .hamburger {
   display: none;
   font-size: 28px;
@@ -65,26 +70,22 @@ hr {
   color: #556753;
 }
 
+/* Mobile Navigation - IDENTICAL across all pages */
 @media (max-width: 600px) {
-
   .nav-links {
     display: none;
     flex-direction: column;
     background-color: #f4fbef;
     position: absolute;
-    top: 3.5rem;
+    top: 100%;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 1001;
     padding: 0.5rem 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
   }
-
-  /* When nav is open, show the menu */
-  nav.open .nav-links {
-    display: flex;
-  }
-
+  
   .nav-links a {
     display: block;
     text-align: center;
@@ -93,23 +94,82 @@ hr {
     color: #556753;
     font-size: 16px;
     background-color: #f4fbef;
+    float: none !important;
+    width: 100%;
   }
-
+  
+  nav.open .nav-links {
+    display: flex !important;
+  }
+  
   .hamburger {
     display: block;
     position: absolute;
     right: 1rem;
-    top: 1.25rem;
-    z-index: 20;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1002;
     font-size: 28px;
     background: none;
     border: none;
     cursor: pointer;
     color: #556753;
   }
-
+  
   nav .left {
     float: none;
     text-align: center;
+  }
+  
+  nav .nav-links {
+    float: none;
+  }
+}
+
+.about-section {
+  background-color: #657A62;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.about-box {
+  background-color: #556753;
+  color: #F4FBEF;
+  padding: 2rem;
+  border-radius: 12px;
+  font-family: 'Bagel Fat One', sans-serif;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  height: 300px;
+}
+.about-box h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
   }
 }
