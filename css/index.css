@@ -1,10 +1,9 @@
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 98%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
-
 body {
 	background: #F4FBEF;
 	flex: none;
@@ -12,15 +11,14 @@ body {
 	align-self: stretch;
 	flex-grow: 0;
 }
-
-
 nav {
 	position: relative;
 	overflow: hidden;
 	padding: 1rem;
 	z-index: 1000;
+	width: 100%;
+	box-sizing: border-box; /* This ensures padding doesn't add to width */
 }
-
 nav a {
 	color: #556753;
 	float: right;
@@ -35,39 +33,31 @@ nav a {
 	line-height: 24px;
 	padding: 5px 1.5rem;
 }
-
 nav .left {
 	float: left;
 }
-
 nav .left img{
 	height: 32px;
 	width: 38px;
 	object-fit: contain;
 }
-
 nav .name {
 	font-size: 1.25rem;
 	font-weight: bold;
-
 	width: 689px;
 	height: 36px;
-
 	font-family: 'Bagel Fat One';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 28px;
 	line-height: 36px;
-
 	color: #657A62;
 }
-
 hr {
 	width: 100%;
+	margin: 0; /* Remove default margin */
 }
-
 .center {
-	/* REMOVE position absolute */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -77,92 +67,86 @@ hr {
 	color: #657A62;
 	padding: 2rem;
 	height: 100%;
+	z-index: 10; /* Ensure text appears above images */
+	position: relative;
 }
-
 .welcome {
 	font-size: 48px;
 	line-height: 1.1;
 	margin-bottom: 0.5rem;
 }
-
 .center p {
 	font-size: 24px;
 	margin: 0;
 }
-
 .center button {
-
-	position: absolute;
 	width: 240px;
 	height: 48px;
-	top: 516.44px;
 	font-size: 24px;
-	font-family: 'Bagel Fat One';	
+	font-family: 'Bagel Fat One';    
 	color: #F4FBEF;
 	background-color: #657A62;
 	border-radius: 10px;
-
+	border: none;
+	cursor: pointer;
+	margin-top: 2rem;
 }
-
 .hamburger {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #556753;
+	display: none;
+	font-size: 28px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #556753;
 }
-
 @media (max-width: 600px) {
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #f4fbef;
-    position: absolute;
-    top: 3.5rem;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    padding: 0.5rem 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  /* When nav is open, show the menu */
-  nav.open .nav-links {
-    display: flex;
-  }
-
-  .nav-links a {
-    display: block;
-    text-align: center;
-    padding: 12px 0;
-    border-top: 1px solid #ccc;
-    color: #556753;
-    font-size: 16px;
-    background-color: #f4fbef;
-  }
-
-  .hamburger {
-    display: block;
-    position: absolute;
-    right: 1rem;
-    top: 1.25rem;
-    z-index: 20;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #556753;
-  }
-
-  nav .left {
-    float: none;
-    text-align: center;
-  }
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		background-color: #f4fbef;
+		position: absolute;
+		top: 3.5rem;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		padding: 0.5rem 0;
+		box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	}
+	/* When nav is open, show the menu */
+	nav.open .nav-links {
+		display: flex;
+	}
+	.nav-links a {
+		display: block;
+		text-align: center;
+		padding: 12px 0;
+		border-top: 1px solid #ccc;
+		color: #556753;
+		font-size: 16px;
+		background-color: #f4fbef;
+	}
+	.hamburger {
+		display: block;
+		position: absolute;
+		right: 1rem;
+		top: 1.25rem;
+		z-index: 20;
+		font-size: 28px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: #556753;
+	}
+	nav .left {
+		float: none;
+		text-align: center;
+	}
+	.pic1, .pic2 {
+		display: none; /* Hide images on mobile for better layout */
+	}
 }
 .section {
-	min-height 100vh;
+	min-height: 100vh; /* Fixed syntax error */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -170,8 +154,8 @@ hr {
 	font-family: 'Bagel Fat One', sans-serif;
 	color: #657A62;
 	transition: background-color 0.5s ease-in-out;
+	position: relative; /* For absolute positioning of images */
 }
-
 .section-two {
 	background-color: #556753;
 	min-height: 50vh;
@@ -181,29 +165,38 @@ hr {
 	align-items: center;
 	color: white;
 	padding: 2rem;
-	margin-top: 24.5rem;
 	width: 100%;
-
-	p {
-		text-align: center;
-		font-size: 56px;
-	}
+	box-sizing: border-box;
 }
-
+.section-two p { /* Fixed syntax error */
+	text-align: center;
+	font-size: 56px;
+	margin: 0;
+}
+.img-holder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none; /* Prevent images from blocking interactions */
+	z-index: 1;
+}
 .pic1 {
 	position: absolute;
-	width: 1085px;
-	height: 1085px;
-	left: 0.29px;
-	top: 90px;
-	z-index: 1;
+	width: 300px; /* Reduced size for better layout */
+	height: 300px;
+	left: 50px; /* Top left positioning */
+	top: 50px;
+	object-fit: cover;
+	border-radius: 10px;
 }
-
 .pic2 {
 	position: absolute;
-	width: 1119px;
-	height: auto;
-	left: 390.29px;
-	top: -85px;
-	z-index: 1;
+	width: 300px; /* Reduced size for better layout */
+	height: 300px;
+	right: 50px; /* Bottom right positioning */
+	bottom: 50px;
+	object-fit: cover;
+	border-radius: 10px;
 }
