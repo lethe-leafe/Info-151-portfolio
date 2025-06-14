@@ -127,13 +127,14 @@ hr {
 }
 
 .about-section {
-  background-color: #657A62;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 2rem;
-  box-sizing: border-box;
+	background-color: #657A62;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem 2rem;
+	box-sizing: border-box;
+	height: 100vh;
 }
 
 .about-grid {
@@ -172,4 +173,11 @@ hr {
   .about-grid {
     grid-template-columns: 1fr;
   }
+}
+
+h1 {
+  	font-family: 'Bagel Fat One', sans-serif;
+	text-align: center;
+  	color: #556753;
+	font-size: 64px;
 }

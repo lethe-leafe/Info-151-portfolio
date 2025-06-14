@@ -173,3 +173,10 @@ hr {
     grid-template-columns: 1fr;
   }
 }
+
+h1 {
+  	font-family: 'Bagel Fat One', sans-serif;
+	text-align: center;
+  	color: #556753;
+	font-size: 64px;
+}
