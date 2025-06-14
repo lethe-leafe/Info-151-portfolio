@@ -1,15 +1,24 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 98%;
+}
+
 body {
 	background: #F4FBEF;
 	flex: none;
 	order: 1;
 	align-self: stretch;
 	flex-grow: 0;
-	z-index: 1;
 }
 
+
 nav {
+	position: relative;
 	overflow: hidden;
 	padding: 1rem;
+	z-index: 1000;
 }
 
 nav a {
@@ -58,17 +67,16 @@ hr {
 }
 
 .center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-  	display: flex;
+	/* REMOVE position absolute */
+	display: flex;
 	flex-direction: column;
-  	justify-content: center; 
-	align-items: center;     
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-	font-family: 'Bagel Fat One';	
+	font-family: 'Bagel Fat One';
 	color: #657A62;
+	padding: 2rem;
+	height: 100%;
 }
 
 .welcome {
@@ -152,4 +160,50 @@ hr {
     float: none;
     text-align: center;
   }
+}
+.section {
+	min-height 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	font-family: 'Bagel Fat One', sans-serif;
+	color: #657A62;
+	transition: background-color 0.5s ease-in-out;
+}
+
+.section-two {
+	background-color: #556753;
+	min-height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	padding: 2rem;
+	margin-top: 24.5rem;
+	width: 100%;
+
+	p {
+		text-align: center;
+		font-size: 56px;
+	}
+}
+
+.pic1 {
+	position: absolute;
+	width: 1085px;
+	height: 1085px;
+	left: 0.29px;
+	top: 90px;
+	z-index: 1;
+}
+
+.pic2 {
+	position: absolute;
+	width: 1119px;
+	height: auto;
+	left: 390.29px;
+	top: -85px;
+	z-index: 1;
 }

@@ -30,17 +30,20 @@
 			About me
 		</h1>
 
-		<h2> Fact1 </h2>
-		<p> Explain Fact1 </p>
+		<div class="about-grid">
+			<div class="about-box"> blah blah blah</div>
+			<div class="about-box"> blah blah blah</div>
+			<div class="about-box"> blah blah blah</div>
+			<div class="about-box"> blah blah blah</div>
+		</div>
+		<script>
+		  const hamburger = document.querySelector('.hamburger');
+		  const nav = document.querySelector('nav');
 
-		<h2> Fact2 </h2>
-		<p> Explain Fact2 </p>
-
-		<h2> Fact3 </h2>
-		<p> Explain Fact3 </p>
-
-		<h2> Fact4 </h2>
-		<p> Explain Fact4 </p>
+		  hamburger.addEventListener('click', () => {
+			nav.classList.toggle('open');
+		  });
+		</script>
 
 	</body>
 </html>

@@ -1,3 +1,9 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
 	background: #F4FBEF;
 	flex: none;
@@ -111,5 +117,53 @@ hr {
   nav .left {
     float: none;
     text-align: center;
+  }
+}
+
+.about-section {
+  background-color: #657A62;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem; /* more spacing between boxes */
+  max-width: 1200px; /* to prevent it from stretching too far */
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.about-box {
+  background-color: #556753;/* Light contrasting background */
+  color: #F4FBEF;
+  padding: 2rem;
+  border-radius: 12px;
+  font-family: 'Bagel Fat One', sans-serif;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.about-box h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
   }
 }
