@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title> projects </title>
 	</head>
-
 	<body>
 		<nav>
 			<div class="left">
@@ -26,13 +25,57 @@
 		  </div>
 		</nav>
 		<hr>
-		<script>
-		  const hamburger = document.querySelector('.hamburger');
-		  const nav = document.querySelector('nav');
+    <div class="projects-header">
+        <h1>My Projects</h1>
+        <p>A showcase of my development work and creative solutions</p>
+    </div>
 
-		  hamburger.addEventListener('click', () => {
-			nav.classList.toggle('open');
-		  });
-		</script>
+    <div class="projects-container">
+        <!-- Featured Project -->
+        <div class="project-card featured-project">
+            <div class="project-image">
+                🌟
+            </div>
+            <div class="project-content">
+                <h2 class="project-title">Info 151 SP25</h2>
+                <p class="project-description">
+				This is a project that was worked on in the spring term for this class!
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">scss</span>
+                    <span class="tech-tag">Html</span>
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">JS</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/lethe-leafe/info-151-S25" class="project-link">View Code</a>
+                    <a href="https://deploy-preview-4--lethe-info-151-s25.netlify.app/" class="project-link demo">Live Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regular Projects -->
+        <div class="project-card">
+			<div class="project-image"><img src="image.png"></div>
+            <div class="project-content">
+                <h3 class="project-title">CosmoStocks</h3>
+                <p class="project-description">
+				This is the project I did for CI-102,CI-103
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+            </div>
+        </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
 	</body>
 </html>

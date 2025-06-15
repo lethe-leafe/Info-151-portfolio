@@ -1,127 +1,299 @@
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
 
 body {
-  background: #F4FBEF;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
+	background: #F4FBEF;
+	flex: none;
+	order: 1;
+	align-self: stretch;
+	flex-grow: 0;
 }
-
 nav {
-  position: relative;
-  overflow: visible;
-  padding: 1rem;
-  z-index: 1000;
-  width: 100%;
-  box-sizing: border-box;
+	position: relative;
+	overflow: visible;
+	padding: 1rem;
+	z-index: 1000;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 nav a {
-  color: #556753;
-  float: right;
-  text-align: center;
-  padding: 5px 1.5rem;
-  text-decoration: none;
-  font-family: 'Bagel Fat One';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
+	color: #556753;
+	float: right;
+	text-align: center;
+	padding: 5px 1.5rem;
+	text-decoration: none;
+	font-family: 'Bagel Fat One';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 nav .left {
-  float: left;
+	float: left;
 }
 
 nav .left img {
-  height: 32px;
-  width: 38px;
-  object-fit: contain;
+	height: 32px;
+	width: 38px;
+	object-fit: contain;
 }
 
 nav .name {
-  font-family: 'Bagel Fat One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 36px;
-  color: #657A62;
+	font-family: 'Bagel Fat One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 36px;
+	color: #657A62;
 }
 
 hr {
-  width: 100%;
-  margin: 0;
-  border: none;
-  border-top: 1px solid #ccc;
+	width: 100%;
+	margin: 0;
+	border: none;
+	border-top: 1px solid #ccc;
 }
 
 .hamburger {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #556753;
+	display: none;
+	font-size: 28px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #556753;
 }
 
-/* Mobile Navigation - IDENTICAL across all pages */
+/* Mobile Navigation */
 @media (max-width: 600px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #f4fbef;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1001;
-    padding: 0.5rem 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 100%;
-  }
-  
-  .nav-links a {
-    display: block;
-    text-align: center;
-    padding: 12px 0;
-    border-top: 1px solid #ccc;
-    color: #556753;
-    font-size: 16px;
-    background-color: #f4fbef;
-    float: none !important;
-    width: 100%;
-  }
-  
-  nav.open .nav-links {
-    display: flex !important;
-  }
-  
-  .hamburger {
-    display: block;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1002;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #556753;
-  }
-  
-  nav .left {
-    float: none;
-    text-align: center;
-  }
-  
-  nav .nav-links {
-    float: none;
-  }
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		background-color: #f4fbef;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		z-index: 1001;
+		padding: 0.5rem 0;
+		box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+		width: 100%;
+	}
+	
+	.nav-links a {
+		display: block;
+		text-align: center;
+		padding: 12px 0;
+		border-top: 1px solid #ccc;
+		color: #556753;
+		font-size: 16px;
+		background-color: #f4fbef;
+		float: none !important;
+		width: 100%;
+	}
+	
+	nav.open .nav-links {
+		display: flex !important;
+	}
+	
+	.hamburger {
+		display: block;
+		position: absolute;
+		right: 1rem;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1002;
+		font-size: 28px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: #556753;
+	}
+	
+	nav .left {
+		float: none;
+		text-align: center;
+	}
+	
+	nav .nav-links {
+		float: none;
+	}
+}
+
+.projects-header {
+	text-align: center;
+	padding: 3rem 2rem 2rem;
+	font-family: 'Bagel Fat One';
+	color: #657A62;
+}
+
+.projects-header h1 {
+	font-size: 3rem;
+	margin: 0;
+	margin-bottom: 1rem;
+}
+
+.projects-header p {
+	font-size: 1.2rem;
+	margin: 0;
+	opacity: 0.8;
+}
+
+.projects-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2rem;
+}
+
+.project-card {
+	background-color: #556753;
+	color: #F4FBEF;
+	border-radius: 15px;
+	overflow: hidden;
+	font-family: 'Bagel Fat One', sans-serif;
+}
+
+.project-card:hover {
+	transform: translateY(-10px);
+}
+
+.project-image {
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	color: #F4FBEF;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.project-card:hover .project-image::before {
+	transform: translateX(100%);
+}
+
+.project-content {
+	padding: 1.5rem;
+}
+
+.project-title {
+	font-size: 1.5rem;
+	margin: 0 0 1rem 0;
+	color: #F4FBEF;
+}
+
+.project-description {
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-bottom: 1.5rem;
+	opacity: 0.9;
+}
+
+.project-tech {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+	background-color: #657A62;
+	color: #F4FBEF;
+	padding: 0.3rem 0.8rem;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.project-links {
+	display: flex;
+	gap: 1rem;
+}
+
+.project-link {
+	padding: 0.8rem 1.5rem;
+	background-color: #657A62;
+	color: #F4FBEF;
+	text-decoration: none;
+	border-radius: 8px;
+	font-weight: bold;
+	text-align: center;
+	flex: 1;
+}
+
+.project-link:hover {
+	background-color: #F4FBEF;
+	color: #556753;
+	transform: translateY(-2px);
+}
+
+.project-link.demo {
+	background-color: transparent;
+	border: 2px solid #657A62;
+}
+
+.project-link.demo:hover {
+	background-color: #657A62;
+	color: #F4FBEF;
+}
+
+.featured-project {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0;
+	min-height: 300px;
+}
+
+.featured-project .project-image {
+	height: 100%;
+	border-radius: 0;
+}
+
+.featured-project .project-content {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.featured-project .project-title {
+	font-size: 2rem;
+}
+
+.featured-project .project-description {
+	font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+	.projects-header h1 {
+		font-size: 2rem;
+	}
+	
+	.projects-container {
+		grid-template-columns: 1fr;
+		padding: 1rem;
+	}
+	
+	.featured-project {
+		grid-template-columns: 1fr;
+	}
+	
+	.project-links {
+		flex-direction: column;
+	}
+}
+
+.project-image img{
+	width: 200px;
+	height: 200px;
 }
