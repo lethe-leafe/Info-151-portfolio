@@ -125,3 +125,262 @@ hr {
     float: none;
   }
 }
+.resume-container {
+	max-width: 1200px;
+	margin: 2rem auto;
+	background: white;
+	box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+	border-radius: 16px;
+	overflow: hidden;
+	font-family: 'Bagel Fat One', sans-serif;
+}
+
+.resume-header {
+	background: linear-gradient(135deg, #657A62 0%, #556753 100%);
+	color: white;
+	padding: 3rem 2rem;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.profile-pic {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: rgba(255,255,255,0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 48px;
+	flex-shrink: 0;
+}
+
+.header-info h1 {
+	font-size: 3rem;
+	margin: 0 0 0.5rem 0;
+	font-weight: 400;
+}
+
+.header-info .title {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	opacity: 0.9;
+}
+
+.contact-info {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	font-size: 1rem;
+}
+
+.contact-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.social-links {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.social-link {
+	background: rgba(255,255,255,0.2);
+	padding: 0.5rem;
+	border-radius: 8px;
+	color: white;
+	text-decoration: none;
+	font-size: 0.9rem;
+	transition: background 0.3s ease;
+}
+
+.social-link:hover {
+	background: rgba(255,255,255,0.3);
+}
+
+.resume-body {
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 3rem;
+}
+
+.section-title {
+	color: #657A62;
+	font-size: 1.8rem;
+	margin-bottom: 1.5rem;
+	border-bottom: 3px solid #657A62;
+	padding-bottom: 0.5rem;
+}
+
+.career-summary {
+	grid-column: 1 / -1;
+	margin-bottom: 2rem;
+}
+
+.summary-text {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #666;
+	font-family: 'Bagel Fat One';
+}
+
+.experience-item {
+	margin-bottom: 2rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid #eee;
+}
+
+.experience-item:last-child {
+	border-bottom: none;
+}
+
+.job-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 0.5rem;
+}
+
+.job-title {
+	font-size: 1.3rem;
+	color: #657A62;
+	margin: 0;
+}
+
+.company {
+	font-size: 1rem;
+	color: #556753;
+	margin: 0.2rem 0;
+}
+
+.job-dates {
+	font-size: 0.9rem;
+	color: #888;
+	text-align: right;
+}
+
+.job-description {
+	font-family: 'Bagel Fat One';
+	color: #666;
+	line-height: 1.5;
+	margin: 0.5rem 0;
+}
+
+.achievements {
+	margin-top: 1rem;
+}
+
+.achievements h4 {
+	color: #657A62;
+	margin-bottom: 0.5rem;
+	font-family: 'Bagel Fat One';
+	font-size: 1rem;
+}
+
+.achievements ul {
+	margin: 0;
+	padding-left: 1.2rem;
+	font-family: 'Bagel Fat One';
+	color: #666;
+}
+
+.achievements li {
+	margin-bottom: 0.3rem;
+}
+
+.skills-section {
+	background: #f8f9fa;
+	padding: 1.5rem;
+	border-radius: 12px;
+}
+
+.skill-category {
+	margin-bottom: 1.5rem;
+}
+
+.skill-category h3 {
+	color: #657A62;
+	font-size: 1.1rem;
+	margin-bottom: 0.8rem;
+}
+
+.skill-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.6rem;
+}
+
+.skill-name {
+	font-size: 0.9rem;
+	color: #556753;
+}
+
+.skill-bar {
+	width: 55%;
+	height: 6px;
+	background: #e0e0e0;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.skill-progress {
+	height: 100%;
+	background: linear-gradient(90deg, #657A62, #556753);
+	border-radius: 4px;
+	transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+	.resume-header {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.header-info h1 {
+		font-size: 2rem;
+	}
+
+	.contact-info {
+		justify-content: center;
+	}
+
+	.resume-body {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		padding: 1.5rem;
+	}
+
+	.job-header {
+		flex-direction: column;
+	}
+
+	.job-dates {
+		text-align: left;
+		margin-top: 0.5rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.resume-container {
+		margin: 1rem;
+		border-radius: 12px;
+	}
+
+	.resume-header {
+		padding: 2rem 1.5rem;
+	}
+
+	.header-info h1 {
+		font-size: 1.8rem;
+	}
+
+	.contact-info {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+}
